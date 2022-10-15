@@ -2,7 +2,9 @@
 get_header();
 get_template_part("sidebar");
 ?>
-        
+        <article class="item-content">
+              <img src="<?php echo get_bloginfo('template_url')?>\assets\img\content.jpeg">
+          </article>
           <footer class="item-footer-1">
               <div class="direccion">
                 <h2> Encuentranos </h2><br>
@@ -39,25 +41,25 @@ get_template_part("sidebar");
                     <div class="swiper-slide card-image">
                       
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster1.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster1.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster2.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster2.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster3.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster3.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster4.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster4.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster5.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster5.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster6.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster6.jpg">
                         </div>
                         <div class="image">
-                          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\Poster7.jpg">
+                          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster7.jpg">
                         </div>
 
                       </div>
@@ -68,7 +70,8 @@ get_template_part("sidebar");
                   </div>            
             
             </section>
-             <script>
+
+     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,

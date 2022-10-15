@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="<?php echo get_bloginfo('template_url')?>\assets\css\Progrid.css"> 
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   
   <title>La Bolata</title>
 
@@ -20,7 +21,7 @@
     <header>
       <div class="header__principal" id="grad">
         <div class="logo">
-          <img src="C:\Users\fborj\OneDrive\Escritorio\LA BOLATA\bolata.jpg">
+          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\bolata.jpg">
         </div>
         <div class="menu__principal">
         <div class="menu">
