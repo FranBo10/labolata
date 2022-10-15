@@ -1,0 +1,13 @@
+/*
+Theme Name: la_bolata
+Theme URL: 
+Description: 
+Version: 0.1
+Author: FranBo
+Author URL: 
+*/
+@media only screen and (max-width: 480px){
+    html {
+        margin-top: 0 !important;
+    }
+}
