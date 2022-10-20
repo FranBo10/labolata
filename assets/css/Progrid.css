@@ -209,6 +209,20 @@ header {
 	margin-top: -40px;
 }
 
+.evento_container img {
+	width: 100%;
+	margin-top: 10px;
+}
+
+#clock {
+	font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.evento_container p {
+	position: absolute;
+	color: white;
+}
+
 .modal_info_grupo {
 	display: flex;
 	height: 100%;

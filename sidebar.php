@@ -21,7 +21,16 @@ echo $date;
       if (!empty($eventos)) {
 
         foreach ($eventos as $evt => $array) {
-            echo $array["name"];
+           ?> 
+           <img src="<?php echo get_bloginfo('template_url')?>\assets\img\Poster8.jpg">
+           <h4>Toxic en La Bolata !!</h4>
+           <p class"parrafo_cartel> 22:00 h </p>
+
+           
+           
+           <?php 
+
+
 
           }
 
