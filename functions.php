@@ -1,4 +1,25 @@
 <?php
+/*
+|-------------------------------------------------------------------------------
+| Function to add default support
+|-------------------------------------------------------------------------------
+*/
+function WoowSetup(){
+	// This theme uses Woocommerce
+	add_theme_support( 'woocommerce' );
+	// Add default posts and comments RSS feed links to <head>.
+	add_theme_support( 'automatic-feed-links' );
+	// This theme uses Featured Images
+	add_theme_support( 'post-thumbnails' );
+	// This theme uses excerpt in pages
+	add_post_type_support( 'page', 'excerpt' );
+	// Register top menu
+	register_nav_menu( 'Top', 'Top Menu' );
+	// This theme styles the visual editor with editor-style.css to match the theme style.
+	add_editor_style();
+}
+add_action( 'after_setup_theme', 'WoowSetup' );
+
 function FrontScripts (){
 	// wp_register_script( 'ajax-woow', JSURL.'ajax-woow.js', array(), '1.0.3', true );
 	// wp_localize_script( 'ajax-woow', 'MyAjax', array( 'url' => admin_url( 'admin-ajax.php' ), 'urlHome' => home_url(), 'urlJs' => JSURL ) );
@@ -127,9 +148,10 @@ function PostTypeSection ($post_type, $fecha) {
     $args = array(
             'post_type' => $post_type
         ,   'post_status' => 'publish'
-        ,   'posts_per_page' => 1
-        ,   'meta_query' => array('key' => 'fecha_completa', 'value' => $fecha, 'compare' => 'LIKE')
+        ,   'posts_per_page' => -1
     );
+
+
 
     $wp_query = new WP_Query( $args );
     while( $wp_query->have_posts() ) : $wp_query->the_post();
