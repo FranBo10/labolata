@@ -216,23 +216,35 @@ header {
 
 #clock {
 	font-family: 'Fuzzy Bubbles', cursive;
+	font-size: 3rem;
+	margin-top: 30px;
+	text-align: center;
 }
 
 .evento_container p {
-	position: absolute;
 	color: white;
 }
 
 .modal_info_grupo {
-	display: flex;
+	display: flex;;
 	height: 100%;
 	width: 100%;
 }
 
 .cartel_info_grupos {
-	height: 400px;
-	width: 40%;
-	background-color: lightgray;
+	width: 100%;
+}
+
+.cartel_info_grupos img{
+	width: 300px;
+	float: left;
+	margin-right: 10px;
+
+}
+
+.modal_descripcion_evento {
+	width: 60%;
+	padding: 10px;
 }
 
 .calendar_cont .fecha p {
@@ -243,9 +255,17 @@ header {
 	font-family: 'Fuzzy Bubbles', cursive;
 }
 
-/* .evento_container h4{
+.evento_container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.evento_container h4{
 	text-align: center;
-} */
+}
+.evento_container p{
+	text-align: center;
+	color: black;}
 
 #grad {
 background-color: #660033;
