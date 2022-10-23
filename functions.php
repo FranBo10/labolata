@@ -148,11 +148,10 @@ function PostTypeSection ($post_type, $fecha) {
     $args = array(
             'post_type' => $post_type
         ,   'post_status' => 'publish'
-        ,   'posts_per_page' => -1
+        ,   'posts_per_page' => 1
     );
-
-
-
+    $args[ 'meta_query' ] = array('relation' => 'AND');
+    array_push($args['meta_query'], array('key' => 'fecha_completa', 'value' => date("Y-m-d"), 'compare' => 'LIKE'));
     $wp_query = new WP_Query( $args );
     while( $wp_query->have_posts() ) : $wp_query->the_post();
         $post_id = get_the_id();
