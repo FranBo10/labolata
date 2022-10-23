@@ -162,6 +162,7 @@ function PostTypeSection ($post_type, $fecha) {
         $post_type_arr[ $post_id ]['name'] = get_the_title();
         $post_type_arr[ $post_id ]['descripcion'] = substr(get_the_excerpt(), 0,100).'...';
         $post_type_arr[ $post_id ]['fecha_completa'] = get_post_meta($post_id, "fecha_completa", true);
+        $post_type_arr[ $post_id ]['hora_inicial'] = get_post_meta($post_id, "hora_inicial", true);
     endwhile;
     wp_reset_postdata();
     wp_reset_query();

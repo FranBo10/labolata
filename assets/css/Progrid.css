@@ -136,7 +136,7 @@ header {
 }
 
 .modal {
-	display: hidden;;
+	display: none;
 }
 
 .modal_container {

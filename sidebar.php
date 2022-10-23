@@ -15,24 +15,19 @@
     </p>
   </div>
   <div class="evento_container">
-
     <?php
     $eventos = PostTypeSection('evento', $date);
-    print_r( $eventos);
     if (!empty($eventos)) {
 
       foreach ($eventos as $evt => $array) {
+        $fecha_nueva = date("d/m/Y", strtotime($array["fecha_completa"]));
+        if($date == $fecha_nueva) {
+        ?>
+        <img src="<?php echo $array["urlImg"]?>">
+        <?php
+        }
     ?>
-        <img src="<?php echo get_bloginfo('template_url') ?>\assets\img\Poster8.jpg">
-        <h4>Toxic en La Bolata !!</h4>
-        <p class"parrafo_cartel> 22:00 h </p>
-
-
-
       <?php
-
-
-
       }
     } else {
       ?>
@@ -57,6 +52,7 @@
       <button class="close_modal" id="cerrarModal">X
       </button>
       <div class="modal_contenido">
+        
         <h1>MUY PRONTO...CONCIERTO EN TU BAR FAVORITO !!
         </h1>
         <div class="calendar_cont">
@@ -75,6 +71,26 @@
         </div>
         <div class="modal_info_grupo">
           <div class="cartel_info_grupos">
+          <?php
+    $eventos = PostTypeSection('evento', $date);
+    if (!empty($eventos)) {
+        
+      foreach ($eventos as $evt => $array) {
+        $fecha_nueva = date("d/m/Y", strtotime($array["fecha_completa"]));
+        if($date == $fecha_nueva) {
+        ?>
+        <img src="<?php echo $array["urlImg"]?>">
+        <?php
+        }
+    ?>
+      <?php
+      }
+    } else {
+      ?>
+      <?php
+
+    }
+    ?>
           </div>
           <div class="modal_descripcion_evento">
           </div>
