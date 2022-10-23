@@ -2,15 +2,14 @@
   <iframe loading="lazy" src="https://open.spotify.com/embed?uri=spotify:playlist:3Kp4OZIhnbLsjI8YTOpyPo?si=e00ad0bf07714e23" width="100%" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media" style="max-width:100%px;max-height:500px;">
   </iframe>
 </aside>
-
 <aside class="item-sidebar-2">
   <div class="cartel_aside">
     <h3> EVENTOS PARA HOY:
     </h3>
     <p>
       <?php
-      $date = date('d/m/Y', time());
-      echo $date;
+        $date = date('d/m/Y', time());
+        echo $date;
       ?>
     </p>
   </div>
@@ -18,21 +17,13 @@
 
     <?php
     $eventos = PostTypeSection('evento', $date);
-    print_r( $eventos);
     if (!empty($eventos)) {
-
       foreach ($eventos as $evt => $array) {
-    ?>
+        ?>
         <img src="<?php echo get_bloginfo('template_url') ?>\assets\img\Poster8.jpg">
         <h4>Toxic en La Bolata !!</h4>
         <p class"parrafo_cartel> 22:00 h </p>
-
-
-
-      <?php
-
-
-
+        <?php
       }
     } else {
       ?>
@@ -46,7 +37,6 @@
     <?php
 
     }
-
     ?>
 
     <button type="button" id="abrirModal">VER DETALLE
