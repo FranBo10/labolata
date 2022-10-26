@@ -143,15 +143,18 @@ function save_post_meta( $post_id, $post ) {
 }
 add_action( 'save_post', 'save_post_meta', 10, 2 );
 //_______________________________________________________________//
-function PostTypeSection ($post_type, $fecha) {
+function PostTypeSection ($post_type, $origen) {
     $post_type_arr = array();
     $args = array(
             'post_type' => $post_type
         ,   'post_status' => 'publish'
-        ,   'posts_per_page' => 1
+        ,   'posts_per_page' => -1
     );
-    $args[ 'meta_query' ] = array('relation' => 'AND');
-    array_push($args['meta_query'], array('key' => 'fecha_completa', 'value' => date("Y-m-d"), 'compare' => 'LIKE'));
+    if($origen == 'sidebar') {
+        $args[ 'meta_query' ] = array('relation' => 'AND');
+        array_push($args['meta_query'], array('key' => 'fecha_completa', 'value' => date("Y-m-d"), 'compare' => 'LIKE'));
+        $args['posts_per_page'] = 1;
+    }    
     $wp_query = new WP_Query( $args );
     while( $wp_query->have_posts() ) : $wp_query->the_post();
         $post_id = get_the_id();

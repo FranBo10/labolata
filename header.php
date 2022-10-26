@@ -24,24 +24,23 @@
     <header>
       <div class="header__principal" id="grad">
         <div class="logo">
-          <img src="<?php echo get_bloginfo('template_url')?>\assets\img\bolata.jpg">
+          <a href="<?php echo home_url() ?>"><img src="<?php echo get_bloginfo('template_url')?>\assets\img\bolata.jpg"></a>
         </div>
         <div class="menu__principal">
         <div class="menu">
         <nav>
             <ul>
-              <li><a href="#" id="selected
-                ">Inicio</a></li>
-              <li><a href="#">Eventos</a>
+              <li><a href="<?php echo home_url() ?>" id="selected">Inicio</a></li>
+              <li><a href="<?php echo home_url("eventos") ?>">Eventos</a>
                 <ul>
-                  <li><a href="#">Conciertos</a></li>
-                  <li><a href="#">Reserva el local</a></li>
-                  <li><a href="#">Juegos</a></li>
+                  <li><a href="<?php echo home_url("conciertos") ?>">Conciertos</a></li>
+                  <li><a href="<?php echo home_url("reservas") ?>">Reserva el local</a></li>
+                  <li><a href="<?php echo home_url("juegos") ?>">Juegos</a></li>
                 </ul>
               </li>
-              <li><a href="#">Carteles</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="<?php echo home_url("carteles") ?>">Carteles</a></li>
+              <li><a href="<?php echo home_url("blog") ?>">Blog</a></li>
+              <li><a href="<?php echo home_url("contacto") ?>">Contacto</a></li>
             </ul>
           </nav>
         </div>      

@@ -15,7 +15,7 @@
   </div>
   <div class="evento_container">
     <?php
-    $eventos = PostTypeSection('evento', $date);
+    $eventos = PostTypeSection('evento', 'sidebar');
     if (!empty($eventos)) {
       foreach ($eventos as $evt => $array) {
         ?>

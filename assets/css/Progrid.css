@@ -104,6 +104,13 @@ header {
 	text-shadow: 2px 2px #FF0000;
 }
 
+.cartel_mes {
+	font-size: 1.25rem;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
 .cartel_aside {
 	height: 80px;
 	width: 100%;
@@ -133,6 +140,10 @@ header {
 	padding: 10px;
 	font-weight: bold;
 	color: #fff;
+}
+
+.swiper-slide img {
+	cursor: pointer;
 }
 
 .modal {
@@ -461,6 +472,14 @@ nav ul li ul:before {
    height: 350px;
    padding: 5px;
    margin-right: 40px;
+ }
+
+ .slider_eventos {
+	position: relative
+ }
+
+ .slider_eventos img {
+	width: 100%;
  }
 .carteles-nav {
    height: 350px;
