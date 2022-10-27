@@ -57,45 +57,6 @@ get_template_part("sidebar");
                     <?php
                     }
                     ?>
-                      <?php
-
-                    foreach ($eventos as $evt => $array) {                       
-                      
-                      ?>
-                      <div class="modal">
-                        <div class="modal_container">
-                          <button class="close_modal" id="cerrarModal">X
-                          </button>
-                      <div class="modal_contenido">
-                        <h1><?php echo $array["name"] ?></h1>
-                          <div class="calendar_cont">
-                            <div class="fecha">
-                              <p> FECHA</p>
-                              <p> <?php echo date("d-m-Y", strtotime($array["fecha_completa"])) ?> </p>
-                            </div>
-                            <div class="hora">
-                              <p> HORA</p>
-                              <p> <?php echo $array["hora_inicial"] ?></p>
-                            </div>
-                          </div>
-                            <div class="modal_info_grupo">
-                              <div class="cartel_info_grupos">  
-                                <img src="<?php echo $array["urlImg"]?>">
-                                <p> <?php echo $array["descripcion"] ?> </p>
-
-                              </div>
-                            </div>
-                          </div>
-                            <div id="clock">
-                            </div>
-                          <script>
-                            let fechaEvento = "<?php echo get_post_meta($array["id"], 'fecha_completa', true); ?>"
-                            let horaEvento = "<?php echo get_post_meta($array["id"], 'hora_inicial', true); ?>"
-                          </script>
-                      </div>
-                      <?php
-                    }            
-                      ?>
               
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -103,9 +64,10 @@ get_template_part("sidebar");
             
             </section>
 
-  <?php wp_footer()?>
-  <script src="<?php echo get_bloginfo('template_url')?>\assets\js\progrid.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+ 
+            <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+            <script src="<?php echo get_bloginfo('template_url')?>\assets\js\progrid.js"></script>
+      <?php wp_footer()?>
      
   </body>
   </html>

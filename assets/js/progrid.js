@@ -43,7 +43,7 @@ const countdown = (deadline, elem, finalMessage) => {
   }, 1000);
 };
 
-countdown(fechaEvento + " " + horaEvento, "clock", "¡Ya empezó el evento!");
+// countdown(fechaEvento + " " + horaEvento, "clock", "¡Ya empezó el evento!");
 
 // let abrirModal = document.getElementById("abrirModal");
 
