@@ -146,11 +146,11 @@ header {
 	cursor: pointer;
 }
 
-.modal {
+.modal , .modal_slider{
 	display: none;
 }
 
-.modal_container {
+.modal_container, .modal_slider_container {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;	
@@ -163,7 +163,7 @@ header {
 	z-index: 1000;
 }
 
-.modal_contenido {
+.modal_contenido, .modal_slider_contenido {
 	max-height: calc(100vh - 60px - 60px);
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -176,12 +176,12 @@ header {
 
 }
 
-.modal_contenido h1 {
+.modal_contenido  h1, .modal_slider_contenido h1 {
 	text-align: center;
 
 }
 
-.close_modal {
+.close_modal, .close_slider_modal {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -194,7 +194,7 @@ header {
 	top: 40px;
 	z-index: 100;	
 }
-.calendar_cont {
+.calendar_cont, .calendar_slider_cont {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -225,7 +225,15 @@ header {
 	margin-top: 10px;
 }
 
-#clock {
+#clock{
+	font-family: 'Fuzzy Bubbles', cursive;
+	font-size: 3rem;
+	margin-top: 30px;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+}
+
+#clock_slider{
 	font-family: 'Fuzzy Bubbles', cursive;
 	font-size: 3rem;
 	margin-top: 30px;
@@ -236,21 +244,20 @@ header {
 	color: white;
 }
 
-.modal_info_grupo {
+.modal_info_grupo, .modal_slider_info_grupo {
 	display: flex;;
 	height: 100%;
 	width: 100%;
 }
 
-.cartel_info_grupos {
+.cartel_info_grupos, .cartel_slider_info_grupos {
 	width: 100%;
 }
 
-.cartel_info_grupos img{
+.cartel_info_grupos img, .cartel_slider_info_grupos img{
 	width: 300px;
 	float: left;
 	margin-right: 10px;
-
 }
 
 .modal_descripcion_evento {
@@ -258,11 +265,11 @@ header {
 	padding: 10px;
 }
 
-.calendar_cont .fecha p {
+.calendar_cont .fecha, .fecha_slider p {
 	font-family: 'Fuzzy Bubbles', cursive;
 }
 
-.calendar_cont .hora p {
+.calendar_cont .hora, .hora_slider p {
 	font-family: 'Fuzzy Bubbles', cursive;
 }
 

@@ -50,30 +50,32 @@
             ?>
         <div class="modal_contenido">
         
-        <h1><?php echo $array["name"] ?></h1>
-        <div class="calendar_cont">
-          <div class="fecha">
-            <p> FECHA</p>
-            <p> <?php echo date("d-m-Y", strtotime($array["fecha_completa"])) ?> </p>
+          <h1><?php echo $array["name"] ?></h1>
+          <div class="calendar_cont">
+            <div class="fecha">
+              <p> FECHA</p>
+              <p> <?php echo date("d-m-Y", strtotime($array["fecha_completa"])) ?> </p>
+            </div>
+            <div class="hora">
+              <p> HORA</p>
+              <p> <?php echo $array["hora_inicial"] ?></p>
+            </div>
           </div>
-          <div class="hora">
-            <p> HORA</p>
-            <p> <?php echo $array["hora_inicial"] ?></p>
+          <div class="modal_info_grupo">
+            <div class="cartel_info_grupos">  
+              <img src="<?php echo $array["urlImg"]?>">
+              <p> <?php echo $array["descripcion"] ?> </p>
+            </div>            
           </div>
+          <div id="clock">
+            </div>
         </div>
-        <div class="modal_info_grupo">
-          <div class="cartel_info_grupos">  
-            <img src="<?php echo $array["urlImg"]?>">
-            <p> <?php echo $array["descripcion"] ?> </p>
-
-          </div>
-        </div>
-        <div id="clock">
-        </div>
+        
         <script>
             let fechaEvento = "<?php echo get_post_meta($array["id"], 'fecha_completa', true); ?>"
             let horaEvento = "<?php echo get_post_meta($array["id"], 'hora_inicial', true); ?>"
         </script>
+        
       </div>
             <?php
         }
@@ -81,40 +83,44 @@
         ?>
         <div class="modal_contenido">
         
-        <h1>MUY PRONTO...CONCIERTO EN TU BAR FAVORITO !!</h1>
-        <div class="calendar_cont">
-          <div class="fecha">
-            <p> FECHA</p>
-            <p>
+          <h1>MUY PRONTO...CONCIERTO EN TU BAR FAVORITO !!</h1>
+          <div class="calendar_cont">
+            <div class="fecha">
+              <p> FECHA</p>
+              <p>
                 <?php
                     $date = date('d/m/Y', time());
                     echo $date;
                 ?>
-            </p>
-          </div>
-          <div class="hora">
-            <p> HORA</p>
-            <p>
+              </p>
+            </div>
+            <div class="hora">
+              <p> HORA</p>
+              <p>
                 <?php
                     $date = date('H:i', time());
                     echo $date;
                 ?>
-            </p>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="modal_info_grupo">
+          <div class="modal_info_grupo">
             <div class="cartel_info_grupos">  
                 <img src="<?php echo get_bloginfo('template_url')?>\assets\img\bolata.jpg">
                 <p> La Bolata,
                 <br>Partida, Carrer Secanets, 2
                 03769 Sanet y Negrals (Alicante)
-                </p>
+                </p>                
             </div>
+          </div>
+          <div id="clock">
+              </div>
         </div>
-      </div>
-        <?php
+          <?php
   
-      }
-      ?>     
+        }
+        ?>     
     </div>
+  
 </aside>
+

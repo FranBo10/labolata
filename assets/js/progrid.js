@@ -13,7 +13,24 @@ $('#abrirModal').click(()=>{$('.modal').fadeIn(200)});
 
 $('#cerrarModal').click(()=>{$('.modal').fadeOut(200)});
 
-$('#abrirModal_slider').click(()=>{$('.modal').fadeIn(200)});
+$('#abrirModal-slider').click(()=>{$('.modal_slider').fadeIn(200)});
+
+$('#cerrarModal-slider').click(()=>{$('.modal_slider').fadeOut(200)});
+
+$('.slider_modal').click(function () {
+  
+  let info = $(this).data("info");
+  console.log(info);
+
+  $(".modal_slider_contenido h1").html(info.name);
+  $(".modal_slider_contenido .slider_imagen").attr('src', info.urlImg);
+  $(".modal_slider_contenido .slider_descripcion").html(info.descripcion);
+  $(".modal_slider_contenido .slider_fecha").html(info.fecha_completa);
+  $(".modal_slider_contenido .slider_hora").html(info.hora_inicial);
+  countdown(info.fecha_completa + " " + info.hora_inicial, "clock_slider", "¡Ya empezó el evento!");
+  $('.modal_slider').fadeIn(200);
+
+});
 
 })
 
@@ -43,7 +60,7 @@ const countdown = (deadline, elem, finalMessage) => {
   }, 1000);
 };
 
-// countdown(fechaEvento + " " + horaEvento, "clock", "¡Ya empezó el evento!");
+countdown(fecha_completa + " " + hora_inicial, "clock", "¡Ya empezó el evento!");
 
 // let abrirModal = document.getElementById("abrirModal");
 
