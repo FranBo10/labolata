@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "name": "bolata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranBo10/labolata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranBo10/labolata/issues"
+  },
+  "homepage": "https://github.com/FranBo10/labolata#readme",
+  "description": ""
+}

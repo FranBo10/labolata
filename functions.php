@@ -117,9 +117,7 @@ function eventos_display_metabox( $post ) {
 }
 
 function save_post_meta( $post_id, $post ) {
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return; 
-	if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return; 
-	if( !current_user_can( 'edit_post' ) ) return; 
+    
     //Guardar campos para los eventos
     if( $_POST['subtitle'] != '') {
 		update_post_meta( $post_id, 'subtitle', $_POST['subtitle']  );  	
